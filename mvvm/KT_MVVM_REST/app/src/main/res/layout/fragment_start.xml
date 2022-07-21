@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.android.kwt.kt_mvvm_rest.viewmodel.MainViewModel" />
+
+        <variable
+            name="startFragment"
+            type="com.android.kwt.kt_mvvm_rest.view.StartFragment" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_cctv1"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:onClick="@{()->startFragment.connectCctv(1)}"
+                android:text="cctv1" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_cctv2"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:onClick="@{()->startFragment.connectCctv(2)}"
+                android:text="cctv2" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>
